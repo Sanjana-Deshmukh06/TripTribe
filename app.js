@@ -98,7 +98,7 @@ app.use((req, res, next) => {
 //     let newUser = await User.register(fakeUser, "hello!");
 //     res.send(newUser);
 // })
-
+app.use("/", listingsRouter);
 app.use("/listings", listingsRouter);
 
 app.get("/privacy", (req, res) => {
@@ -111,10 +111,6 @@ app.get('/terms', (req, res) => {
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
 
-app.use((req, res, next) => {
-    res.locals.currUser = req.user || null;
-    next();
-});
 
 //middleware
 app.all("*", (req, res, next) => {
