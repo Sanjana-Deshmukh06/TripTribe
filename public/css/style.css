@@ -1,0 +1,447 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+
+}
+
+
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* Background color of preloader */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader-inner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.preloader-inner p {
+    font-size: 1.6rem;
+    font-weight: 400px;
+}
+
+.middle-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: #cf4a3b;
+    /* Color of the middle line */
+    transform: translate(-50%, -50%);
+    animation: middle-line-animation 1s forwards;
+}
+
+@keyframes middle-line-animation {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 90vw;
+        /* Expand to full viewport width */
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+/* Hide content until page is loaded */
+#content {
+    display: none;
+}
+.container {
+    flex: 1;
+}
+
+
+/* navbar */
+.navbar {
+    height: 4rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.fa-compass {
+    color: #fe424d !important;
+    font-size: 1.5rem !important;
+}
+
+.nav-link {
+    color: #222222 !important;
+    font-size: 1rem !important;
+}
+
+.btn-search {
+    border-radius: 3rem !important;
+    padding: 0 1rem 0 1rem !important;
+}
+
+.form-control {
+    border-radius: 3rem !important;
+    padding: 0 1rem 0 1rem !important;
+}
+
+.btn-search i {
+    display: inline !important;
+    margin-right: 1rem !important;
+}
+
+.dropdown-toggle {
+    background-color: white !important;
+    border-radius: 0.8rem !important;
+    color: #222222 !important;
+}
+
+button:focus,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.dropdown-item:focus,
+.dropdown-item:active {
+    background-color: #fe424d !important;
+    outline: none !important;
+    color: white !important;
+    border-radius: 2rem !important;
+}
+
+.dropdown-menu {
+    border-radius: 1rem !important;
+    margin-top: 1rem !important;
+    padding: 1rem 1rem 1rem 1rem !important;
+}
+
+#navbarNavAltMarkup {
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+/* footer */
+.f-info-links {
+    text-decoration: none !important;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline !important;
+}
+
+.f-info-social,
+.f-info-links,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-right: 4rem;
+}
+
+.f-info-social i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Icons Section above all cards */
+
+
+/* card style */
+.listings-card {
+    border: none !important;
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    border-radius: 0.9rem !important;
+    object-fit: cover;
+    width: 100% !important;
+    position: relative;
+    align-self: stretch;
+    height: auto;
+    flex-shrink: 0;
+
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.listing-links:hover .card-img-top {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.listing-links {
+    text-decoration: none !important;
+    color: #222222 !important;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.starability-slot{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 2px !important;
+}
+
+/* Add new listing page */
+.add-border {
+    border: 1px solid rgb(233, 213, 213);
+    box-shadow: 0 0 5px rgba(233, 213, 213, 1);
+    border-radius: 2rem !important;
+}
+
+.text-center {
+    align-items: center;
+}
+
+.btn-dark {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* show */
+.show-img {
+    object-fit: cover !important;
+    height: 20rem;
+
+}
+
+/* privacy page */
+.privacy-heading {
+    padding-top: 1rem;
+}
+
+.privacy-heading h3 {
+    color: #fe424d;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.privacy-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+
+/* scrollable buttons */
+#filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scrollable-tabs-container {
+    max-width: 995px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrollable-tabs-container svg {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+.scrollable-tabs-container .filter-container {
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.scrollable-tabs-container .filter-container.dragging {
+    scroll-behavior: auto;
+}
+
+.scrollable-tabs-container .filter-container.dragging a {
+    pointer-events: none;
+}
+
+.scrollable-tabs-container .filter-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-tabs-container .right-arrow,
+.scrollable-tabs-container .left-arrow {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    display: none;
+    align-items: center;
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.scrollable-tabs-container .right-arrow.active,
+.scrollable-tabs-container .left-arrow.active {
+    display: flex;
+}
+
+.scrollable-tabs-container .right-arrow {
+    right: 0;
+    background: linear-gradient(to left, #fff 50%, transparent);
+    justify-content: flex-end;
+}
+
+.scrollable-tabs-container .left-arrow {
+    background: linear-gradient(to right, #fff 50%, transparent);
+    z-index: 9;
+}
+
+.scrollable-tabs-container svg:hover {
+    background-color: #ddd;
+}
+
+.scrollable-tabs-container a {
+    color: black;
+    text-decoration: none !important;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.filter {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+    opacity: 0.7;
+    margin-right: 0.7rem;
+    padding: 0 10px;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-bottom: 2.5px solid #fe424d;
+    color: #fe424d;
+}
+
+.scrollable-tabs-container .filter-container a.active {
+    border-bottom: 2.5px solid #fe424d;
+    color: #fe424d;
+    opacity: 1;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.tax-info {
+    display: none;
+    color: green;
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.toggle-input:checked {
+    background-color: #fe424d !important;
+    outline: none !important;
+    box-shadow: none !important;
+    /* Remove box-shadow */
+
+}
+
+
+.tax-toggle {
+    border: 1px solid rgb(168, 163, 163);
+    border-radius: 1rem;
+    height: auto;
+    width: auto;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    white-space: nowrap;
+}
+
+
+/* responsive Navbar i.e custom nav */
+@media (max-width: 767.98px) {
+    .custom-navbar {
+        background-color: #f8f9fa;
+        /* Change this color to your desired background color */
+    }
+
+    .custom-navbar .navbar-nav .nav-link {
+        color: #333;
+        /* Optional: Change text color for links */
+    }
+
+    .form-check-label {
+        max-width: 5rem;
+        /* Limit the width of the label */
+        text-overflow: ellipsis;
+        /* Truncate text with ellipsis */
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
