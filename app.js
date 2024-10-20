@@ -65,7 +65,7 @@ const sessionOptions = {
     resave: false,
     saveUninitialized: true,
     cookie: {
-        expires: Date.now() + 365 * 24 * 60 * 60 * 1000,
+        expires: Date.now() + 30 * 24 * 60 * 60 * 1000,
         maxAge: 365 * 24 * 60 * 60 * 1000,
     }
 };
@@ -98,7 +98,6 @@ app.use((req, res, next) => {
 //     let newUser = await User.register(fakeUser, "hello!");
 //     res.send(newUser);
 // })
-app.use("/", listingsRouter);
 app.use("/listings", listingsRouter);
 
 app.get("/privacy", (req, res) => {

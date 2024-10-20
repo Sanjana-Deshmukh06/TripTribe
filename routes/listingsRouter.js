@@ -15,7 +15,10 @@ router.route("/")
         wrapAsync(listingController.createNewListing));
 
 //New Listing
-router.get("/new", isLoggedIn, listingController.renderCreateForm)
+router.get("/new", isLoggedIn, listingController.renderCreateForm);
+
+//Filter Listings
+router.get("/filter/:q", wrapAsync(listingController.filterListings));
 
 router.route("/:id")
     .get(wrapAsync(listingController.show))

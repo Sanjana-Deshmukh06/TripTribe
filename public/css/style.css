@@ -1,8 +1,8 @@
 body {
     font-family: "Plus Jakarta Sans", sans-serif !important;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
 }
 
@@ -64,6 +64,7 @@ min-height: 100vh;
 #content {
     display: none;
 }
+
 .container {
     flex: 1;
 }
@@ -85,7 +86,30 @@ min-height: 100vh;
 .nav-link {
     color: #222222 !important;
     font-size: 1rem !important;
+    position: relative;
 }
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background: #fe424d;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #fe424d;
+}
+
+
+
 
 .btn-search {
     border-radius: 3rem !important;
@@ -151,6 +175,7 @@ button:active {
     justify-content: center;
 }
 
+
 .f-info-social {
     display: flex;
     align-items: center;
@@ -180,6 +205,16 @@ button:active {
     justify-content: center;
     align-items: space-evenly;
 }
+.fa-company{
+    color: #fe424d;
+}
+
+.gradient-icon {
+    background: linear-gradient(45deg, #C13584, #E1306C, #F56040, #FCAF45);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Required for background clip to work */
+}
 
 /* Icons Section above all cards */
 
@@ -205,7 +240,8 @@ button:active {
 
 .listing-links:hover .card-img-top {
     transform: scale(1.02);
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth hover effect */
 
 }
 
@@ -229,11 +265,11 @@ button:active {
 }
 
 .card-img-overlay:hover {
-    opacity: 0.2;
+    opacity: 0.1;
     background-color: white;
 }
 
-.starability-slot{
+.starability-slot {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -264,9 +300,11 @@ button:active {
 
 /* show */
 .show-img {
-    object-fit: cover !important;
-    height: 20rem;
-
+    width: 100% !important;  /* Make it responsive and take full width of the container */
+    max-width: 600px !important;  /* Set a max width */
+    height: auto !important;  /* Maintain the aspect ratio */
+    object-fit: cover !important;  /* Optionally crop the image to fit */
+    border-radius: 0.5rem !important;  
 }
 
 /* privacy page */
@@ -375,14 +413,29 @@ button:active {
     opacity: 0.7;
     margin-right: 0.7rem;
     padding: 0 10px;
+    position: relative;
+}
+
+.filter::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2.5px;
+    background: #fe424d;
+    transition: 0.3s;
+}
+
+.filter:hover::after {
+    width: 100%;
 }
 
 .filter:hover {
     opacity: 1;
-    cursor: pointer;
-    border-bottom: 2.5px solid #fe424d;
     color: #fe424d;
 }
+
 
 .scrollable-tabs-container .filter-container a.active {
     border-bottom: 2.5px solid #fe424d;
@@ -423,6 +476,19 @@ button:active {
     white-space: nowrap;
 }
 
+/* review */
+ .short-review {
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.no-border-radius{
+    border-radius: 0 !important; /* Removes the border radius */
+    width: 70% !important;       /* Reduces the width, adjust percentage as needed */
+    resize: none;    
+    border: 1px solid rgb(152, 151, 151) !important;       
+}
 
 /* responsive Navbar i.e custom nav */
 @media (max-width: 767.98px) {

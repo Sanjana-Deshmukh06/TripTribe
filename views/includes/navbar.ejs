@@ -35,11 +35,11 @@
                     </button>
                     <ul class="dropdown-menu">
                         <% if(!currUser) { %>
-                            <li><a class="dropdown-item" href="/signup">SignUp</a></li>
-                            <li><a class="dropdown-item" href="/login">LogIn</a></li>
+                            <li><a class="dropdown-item nav-link" href="/signup">SignUp</a></li>
+                            <li><a class="dropdown-item nav-link" href="/login">LogIn</a></li>
                         <% } %>
                         <% if(currUser) { %>
-                            <li><a class="dropdown-item" href="/logout"><b>Log Out</b></a></li>
+                            <li><a class="dropdown-item nav-link" href="/logout"><b>Log Out</b></a></li>
                         <% } %>
                     </ul>
                     
