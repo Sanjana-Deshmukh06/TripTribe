@@ -1,53 +1,76 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-    <body>
-
-        <div class="row new-b-radius">
-            <div class="col-8 offset-2 add-border my-4">
-                <div class="text-center ">
+<body>
+    <div class="container">
+        <div class="row justify-content-center new-b-radius">
+            <div class="col-md-8 col-sm-12 add-border my-4">
+                <div class="text-center">
                     <br>
                     <h3>Create a New Listing</h3>
                 </div>
-                <form method="POST" action="/listings"  class="needs-validation" novalidate enctype="multipart/form-data">
+                <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
                     <div class="mb-3">
-                        <lable for="title" class="form-lable ">Title</lable>
-                        <input name="listing[title]" placeholder="title" type="text"
-                            class="form-control add-border" required>
-                            <div class="invalid-feedback">Enter valid Title</div>
+                        <label for="title" class="form-label">Title</label>
+                        <input name="listing[title]" placeholder="Title" type="text" class="form-control add-border"
+                            required>
+                        <div class="invalid-feedback">Enter a valid Title</div>
                     </div>
                     <div class="mb-3">
-                        <lable for="description" class="form-lable">Description</lable>
-                        <textarea name="listing[description]" class="form-control add-borde"required></textarea>
-                        <div class="invalid-feedback">Enter valid Description</div>
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="listing[description]" class="form-control add-border" required></textarea>
+                        <div class="invalid-feedback">Enter a valid Description</div>
                     </div>
                     <div class="mb-3">
-                        <lable for="image" class="form-lable">Upload Listing Image</lable>
-                        <input name="listing[image]"  type="file"
-                            class="form-control add-border" required>
+                        <label for="image" class="form-label">Upload Listing Image</label>
+                        <input name="listing[image]" type="file" class="form-control add-border" required>
                     </div>
-                    <div class="row ">
-                        <div class="mb-3 col-md-4">
-                            <lable for="price" class="form-lable">Price</lable>
+
+                    <div class="mb-3">
+                        <label for="validationCustom04" class="form-label">Category</label>
+                        <select class="form-select" id="validationCustom04" name="listing[category]" required>
+                            <option selected disabled value="">Select a category</option>
+                            <option value="Rooms">Rooms</option>
+                            <option value="Iconic cities">Iconic cities</option>
+                            <option value="Mountains">Mountains</option>
+                            <option value="Castles">Castles</option>
+                            <option value="Amazing pools">Amazing pools</option>
+                            <option value="Camping">Camping</option>
+                            <option value="Farms">Farms</option>
+                            <option value="Arctic">Arctic</option>
+                            <option value="Domes">Domes</option>
+                            <option value="Boats">Boats</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid category.
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-4 col-sm-12">
+                            <label for="price" class="form-label">Price</label>
                             <input name="listing[price]" placeholder="1200" type="number" class="form-control add-border" required>
-                       <div class="invalid-feedback">Enter valid price</div>
+                            <div class="invalid-feedback">Enter a valid price</div>
                         </div>
-                        <div class="mb-3 col-md-8">
-                            <lable for="country" class="form-lable">Country</lable>
+                        <div class="mb-3 col-md-8 col-sm-12">
+                            <label for="country" class="form-label">Country</label>
                             <input name="listing[country]" placeholder="India" type="text" class="form-control add-border" required>
-                       <div class="invalid-feedback">Enter valid country</div>
+                            <div class="invalid-feedback">Enter a valid country</div>
                         </div>
                     </div>
+
                     <div class="mb-3">
-                        <lable for="location" class="form-lable">Location</lable>
-                        <input name="listing[location]" placeholder="Jaipur,Rajsthan" type="text" class="form-control add-border" required>
-                    <div class="invalid-feedback">Enter valid location</div></div>
-                    
+                        <label for="location" class="form-label">Location</label>
+                        <input name="listing[location]" placeholder="Jaipur, Rajasthan" type="text" class="form-control add-border" required>
+                        <div class="invalid-feedback">Enter a valid location</div>
+                    </div>
+
                     <div class="text-center">
-                        <button class="btn btn-dark col-2">ADD</button>
+                        <button class="btn btn-dark col-md-2 col-sm-4 col-6">ADD</button>
                     </div>
                     <br>
                 </form>
             </div>
         </div>
-        <script src="/js/script.js"></script>
-    </body>
+    </div>
+    <script src="/js/script.js"></script>
+</body>

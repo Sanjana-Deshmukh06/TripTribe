@@ -1,24 +1,29 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-    <div class="row new-b-radius row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-sm-2 row-cols-2">
-        <div class="offset-3 add-border my-4">
-            <div class="text-center ">
+<div class="container">
+    <div class="row justify-content-center new-b-radius">
+        <div class="col-md-6 col-sm-10 add-border my-4 ">
+            <div class="text-center mt-3 mb-4">
                 <br>
                 <h3>Login</h3>
             </div>
             <form method="POST" action="/login" class="needs-validation" novalidate>
                 <div class="mb-3">
-                    <lable for="username" class="form-lable ">Username</lable>
+                    <label for="username" class="form-label">Username</label>
                     <input name="username" type="text" class="form-control add-border" required>
-                    <div class="invalid-feedback">Enter valid username</div>
+                    <div class="invalid-feedback">Enter a valid username</div>
                 </div>
                 
-                <div class="mb-3">
-                    <lable for="password" class="form-lable ">password</lable>
-                    <input name="password" type="text" class="form-control add-border" required>
-                    <div class="invalid-feedback">Enter valid password</div>
+                <div class="mb-5">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control add-border" required>
+                    <div class="invalid-feedback">Enter a valid password</div>
                 </div>
-                <button class="btn btn-dark offset-5 mb-3">Login</button>
+                <div class="text-center">
+                    <button class="btn btn-dark col-6 col-md-4">Login</button>
+                </div>
+                <br>
             </form>
         </div>
     </div>
+</div>

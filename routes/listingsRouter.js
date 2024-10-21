@@ -20,12 +20,14 @@ router.get("/new", isLoggedIn, listingController.renderCreateForm);
 //Filter Listings
 router.get("/filter/:q", wrapAsync(listingController.filterListings));
 
+//search
+router.get("/search", wrapAsync(listingController.search));
+
 router.route("/:id")
     .get(wrapAsync(listingController.show))
     .put(isLoggedIn, isOwner, upload.single('listing[image]'), wrapAsync(listingController.updateListing))
     .delete(isLoggedIn, isOwner, wrapAsync(listingController.distroyListing));
-//search
-router.get("/search", wrapAsync(listingController.search));
+
 
 //edit route
 router.get("/:id/edit", isLoggedIn,

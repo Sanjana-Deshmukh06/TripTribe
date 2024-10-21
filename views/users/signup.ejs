@@ -1,28 +1,32 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-    <div class="row new-b-radius">
-        <div class="col-6 offset-3 add-border my-4">
-            <div class="text-center ">
-                <br>
+<div class="container">
+    <div class="row justify-content-center my-4">
+        <div class="col-md-6 col-sm-10 add-border mt-3">
+            <div class="text-center mt-3 mb-4">
                 <h3>Sign Up</h3>
             </div>
             <form method="POST" action="/signup" class="needs-validation" novalidate>
                 <div class="mb-3">
-                    <lable for="username" class="form-lable ">Username</lable>
+                    <label for="username" class="form-label">Username</label>
                     <input name="username" type="text" class="form-control add-border" required>
-                    <div class="invalid-feedback">Enter valid username</div>
+                    <div class="invalid-feedback">Enter a valid username</div>
                 </div>
                 <div class="mb-3">
-                    <lable for="email" class="form-lable ">email</lable>
-                    <input name="email" type="text" class="form-control add-border" required>
-                    <div class="invalid-feedback">Enter valid email</div>
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email" type="email" class="form-control add-border" required>
+                    <div class="invalid-feedback">Enter a valid email</div>
                 </div>
-                <div class="mb-3">
-                    <lable for="password" class="form-lable ">password</lable>
-                    <input name="password" type="text" class="form-control add-border" required>
-                    <div class="invalid-feedback">Enter valid password</div>
+                <div class="mb-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control add-border" required>
+                    <div class="invalid-feedback">Enter a valid password</div>
                 </div>
-                <button class="btn btn-dark offset-5 mb-3">Sign Up</button>
+                <div class="text-center">
+                    <button class="btn btn-dark col-6 col-md-4">Sign Up</button>
+                </div>
+                <br>
             </form>
         </div>
     </div>
+</div>
