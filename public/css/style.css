@@ -42,7 +42,7 @@ body {
     background-color: #cf4a3b;
     /* Color of the middle line */
     transform: translate(-50%, -50%);
-    animation: middle-line-animation 1s forwards;
+    animation: middle-line-animation 3s forwards;
 }
 
 @keyframes middle-line-animation {
@@ -76,7 +76,10 @@ body {
     background-color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Distributes items with equal space between */
+
 }
+
 
 .fa-compass {
     color: #fe424d !important;
@@ -157,6 +160,13 @@ button:active {
     border-radius: 1rem;
 }
 
+
+/* FLASH BOX */
+.btn-success{
+background-color: #fe424d !important;
+border: none !important;
+}
+
 /* footer */
 .f-info-links {
     text-decoration: none !important;
@@ -191,21 +201,25 @@ button:active {
 }
 
 .f-info-social i {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     font-size: 1.5rem;
     vertical-align: middle;
 }
 
 .f-info {
+    position: relative; /* Ensures footer does not float */
+    width:100%;
+    bottom: 0;
     text-align: center;
-    height: 8rem;
+    height: 9rem;
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: space-evenly;
 }
-.fa-company{
+
+.fa-company {
     color: #fe424d;
 }
 
@@ -213,7 +227,8 @@ button:active {
     background: linear-gradient(45deg, #C13584, #E1306C, #F56040, #FCAF45);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block; /* Required for background clip to work */
+    display: inline-block;
+    /* Required for background clip to work */
 }
 
 /* Icons Section above all cards */
@@ -222,7 +237,6 @@ button:active {
 /* card style */
 .listings-card {
     border: none !important;
-    margin-bottom: 1rem;
 }
 
 .card-img-top {
@@ -233,7 +247,6 @@ button:active {
     align-self: stretch;
     height: auto;
     flex-shrink: 0;
-
     max-width: 100%;
     transition: transform 0.3s ease-in-out;
 }
@@ -262,6 +275,7 @@ button:active {
 
 .card-img-overlay {
     opacity: 0;
+    padding: 1rem !important;
 }
 
 .card-img-overlay:hover {
@@ -275,6 +289,18 @@ button:active {
     align-items: center !important;
     padding: 2px !important;
 }
+
+.map-tittle {
+    display: flex;
+    align-items: center;
+}
+
+.map-tittle i {
+    color: #000000;
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
 
 /* Add new listing page */
 .add-border {
@@ -298,13 +324,54 @@ button:active {
     justify-content: flex-start;
 }
 
+
 /* show */
 .show-img {
-    width: 100% !important;  /* Make it responsive and take full width of the container */
-    max-width: 600px !important;  /* Set a max width */
-    height: auto !important;  /* Maintain the aspect ratio */
-    object-fit: cover !important;  /* Optionally crop the image to fit */
-    border-radius: 0.5rem !important;  
+    width: 100% !important;
+    /* Make it responsive and take full width of the container */
+    max-width: 600px !important;
+    /* Set a max width */
+    height: auto !important;
+    /* Maintain the aspect ratio */
+    object-fit: cover !important;
+    /* Optionally crop the image to fit */
+    border-radius: 0.5rem !important;
+}
+
+.line-heading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center; /* Center the text and lines */
+
+}
+
+.line-heading::before,
+.line-heading::after {
+    content: "";
+    flex: 1; /* Makes the line take available space */
+    height: 1px; /* Line thickness */
+    background-color: #726e6e; /* Line color, adjust as needed */
+    margin: 0 10px; /* Space between the heading and the line */
+    max-width: 10%; /* Limits the line width to 20% */
+}
+
+
+/* review */
+.short-review {
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-border-radius {
+    border-radius: 0 !important;
+    /* Removes the border radius */
+    width: 70% !important;
+    /* Reduces the width, adjust percentage as needed */
+    resize: none;
+    border: 1px solid rgb(152, 151, 151) !important;
 }
 
 /* privacy page */
@@ -476,19 +543,7 @@ button:active {
     white-space: nowrap;
 }
 
-/* review */
- .short-review {
-    display: inline;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.no-border-radius{
-    border-radius: 0 !important; /* Removes the border radius */
-    width: 70% !important;       /* Reduces the width, adjust percentage as needed */
-    resize: none;    
-    border: 1px solid rgb(152, 151, 151) !important;       
-}
+
 
 /* responsive Navbar i.e custom nav */
 @media (max-width: 767.98px) {
@@ -511,3 +566,82 @@ button:active {
         white-space: nowrap;
     }
 }
+
+/* Hamburger menu */
+.checkboxtoggler {
+    width: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    cursor: pointer;
+  }
+
+  .line-1 {
+    background: #df6447;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+  }
+
+  .line-2 {
+    background: #df6447;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+  }
+
+  .line-3 {
+    background: #df6447;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+  }
+
+  #toggleChecker {
+    height: 3em;
+    width: 100%;
+    display: none;
+  }
+
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+    -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  }
+
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+    -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  }
+
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .nav-profile {
+    position: absolute;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    top: 3rem;
+    right: 1.2rem;
+    align-items: center !important;
+    min-height: 8rem;
+    min-width: 10rem;
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.201);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    gap: 0.5rem;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav-profile a:hover {
+    color: #fe424d;
+  }

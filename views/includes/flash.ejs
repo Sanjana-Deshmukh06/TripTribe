@@ -1,18 +1,51 @@
-<!-- Success Flash -->
+<!-- Flash Success Modal -->
 <% if (success && success.length) { %>
-    <div class="alert alert-success mt-2 mb-2 alert-dismissible fade-show col-6 offset-3" role="alert">
-        <%= success %>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-
-    </div>
-    <% } %>
-
-
-<!-- Error Flash -->
-    <% if (error && error.length) { %>
-        <div class="alert alert-danger mt-2 mb-2 alert-dismissible fade-show col-6 offset-3" role="alert">
-            <%= error %>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    
+    <div class="modal fade" id="flashModal" tabindex="-1" aria-labelledby="flashModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content" style="min-height: 200px; min-width: 300px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="flashModalLabel">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <%= success %>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
         </div>
-        <% } %>
+    </div>
+<% } %>
+
+<!-- Flash Error Modal -->
+<% if (error && error.length) { %>
+    <div class="modal fade" id="flashModal" tabindex="-1" aria-labelledby="flashModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content" style="min-height: 200px; min-width: 300px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="flashModalLabel">Error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <%= error %>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+
+<!-- Script to Show Flash Modal Automatically -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check for existing modal by ID and show if found
+        const flashModal = document.getElementById('flashModal');
+        if (flashModal) {
+            const modal = new bootstrap.Modal(flashModal);
+            modal.show();
+        }
+    });
+</script>

@@ -49,6 +49,20 @@ taxSwitch.addEventListener("click", () => {
     }
 });
 
+// pop up
+document.addEventListener('DOMContentLoaded', function () {
+  // Check if successMessage exists and is not empty
+  if (successMessage && successMessage.length) {
+      var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+      successModal.show();
+  }
+
+  // Check if errorMessage exists and is not empty
+  if (errorMessage && errorMessage.length) {
+      var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+      errorModal.show();
+  }
+});
 
 
 //icon logic

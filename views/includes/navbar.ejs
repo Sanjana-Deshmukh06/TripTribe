@@ -1,50 +1,90 @@
-<nav class="navbar navbar-expand-md  bg-body-light border-bottom sticky-top ">
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
         <!-- Brand and Toggler -->
         <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span><i class="fa-solid fa-bars"></i>
+            <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar Links -->
+        <!-- Navbar Links and Search -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav me-auto">
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
 
             <!-- Search Form -->
-            <div class="navbar-nav ms-auto">
-                <div class="nav-search">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search your destination"
-                            aria-label="Search">
-                        <button class="btn btn-dark btn-search" type="submit"><i
-                                class="fa-solid fa-magnifying-glass"></i>Search</button>
-                    </form>
-                </div>
+            <div class="navbar-nav ms-auto me-2">
+                <form class="d-flex" role="search" action="/listings/search" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search your destination"
+                        aria-label="Search">
+                    <button class="btn btn-dark btn-search d-flex align-items-center" type="submit">
+                        <i class="fa-solid fa-magnifying-glass me-2"></i>
+                        <span>Search</span>
+                    </button>
+                </form>
             </div>
 
-            <!-- Right Side Links and Dropdown -->
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new"><b>Airbnb your home</b></a>
-                <div class="btn-group">
-                    <button class="btn btn-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <% if(!currUser) { %>
-                            <li><a class="dropdown-item nav-link" href="/signup">SignUp</a></li>
-                            <li><a class="dropdown-item nav-link" href="/login">LogIn</a></li>
-                        <% } %>
-                        <% if(currUser) { %>
-                            <li><a class="dropdown-item nav-link" href="/logout"><b>Log Out</b></a></li>
-                        <% } %>
-                    </ul>
-                    
-                </div>
+
+            <!-- Right Side Links for Large Devices -->
+            <div class="navbar-nav ms-auto d-none d-md-flex">
+                <a class="nav-link airbnb-text me-5" href="/listings/new"><b>Airbnb your home</b></a>
+
+                <% if (!currUser) { %>
+                    <div class="btn-group ms-auto ">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item nav-link" href="/signup">Sign Up</a></li>
+                            <li><a class="dropdown-item nav-link" href="/login">Log In</a></li>
+                        </ul>
+                    </div>
+                    <% } %>
+
+                        <% if (currUser) { %>
+                            <a class="nav-link" href="/logout"><b>Log Out</b></a>
+                            <% } %>
+            </div>
+        </div>
+
+        <!-- Small Device Toggle Menu -->
+        <input id="toggleChecker" type="checkbox" class="d-md-none" />
+        <label id="togglerLable" for="toggleChecker" class="d-md-none">
+            <div class="checkboxtoggler">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </label>
+
+        <!-- Dropdown for Small Devices -->
+        <div class="navbar-collapse d-md-none" id="navbarNavAltMarkup">
+            <div class="nav-profile">
+                <a class="nav-link" href="/listings/new">Airbnb your home</a>
+                <% if (!currUser) { %>
+                    <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+                    <a class="nav-link" href="/login"><b>Log In</b></a>
+                    <% } %>
+                        <% if (currUser) { %>
+                            <a class="nav-link" href="/logout"><b>Log Out</b></a>
+                            <% } %>
             </div>
         </div>
     </div>
 </nav>
+
+<script>
+    const hamMenu = document.querySelector("#toggleChecker");
+    const profileMenu = document.querySelector(".nav-profile");
+
+    hamMenu.addEventListener("click", () => {
+        if (profileMenu.style.visibility !== "visible") {
+            profileMenu.style.visibility = "visible";
+            profileMenu.style.opacity = 1;
+        } else {
+            profileMenu.style.visibility = "hidden";
+            profileMenu.style.opacity = 0;
+        }
+    });
+</script>

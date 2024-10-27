@@ -19,11 +19,13 @@
                         <a href="/listings/<%=list._id%>" class="listing-links">
                             <img src="<%= list.image.url %>" class="card-img-top" alt="Image Not Found"
                                 style="height: 18rem;">
-                            <div class="card-img-overlay"></div>
+                                
+                            <div class="card-img-overlay "> </div>
                             <div class="card-body">
                                 <b>
                                     <%= list.title%>
                                 </b>
+                             
                                 <div class="card-text">
                                     <p>
                                         &#8377 <%= list.price ? list.price.toLocaleString("en-In") :'N/A'%>
@@ -37,25 +39,6 @@
                                         <%= list.avgRating %>
                                     </fieldset>
                                 </div>
-
-
-                                <!-- <% const rating=parseInt(list.avgRating); %>
-                                            <% for (let i=1; i <=5; i++) { %>
-                                                <% if (i <=rating) { %>
-
-                                        <fieldset class="starability-slot"
-                                            style="display: flex; justify-content: center;">
-
-                                            Filled star 
-                                             <input type="radio" id="first-rate" name="review[avgRating]" value="" />
-
-                                            <label for="first-rate" title="Amazing">5 stars</label>
-                                            <% } else { %>
-                                             Empty star
-                                                <span class="fa-regular fa-star"></span>
-                                         </fieldset> 
-                                         <% } %>
-                                             <% } %> -->
 
                                 </p>
                             </div>
