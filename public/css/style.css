@@ -231,7 +231,6 @@ border: none !important;
     /* Required for background clip to work */
 }
 
-/* Icons Section above all cards */
 
 
 /* card style */
@@ -529,6 +528,7 @@ border: none !important;
     background-color: #fe424d !important;
     outline: none !important;
     box-shadow: none !important;
+    border: none !important;
     /* Remove box-shadow */
 
 }
