@@ -1,4 +1,5 @@
 TripTribe 🌍
+
 A modern web application built with the MERN stack that simplifies trip planning and enhances travel experiences. TripTribe connects travelers, providing a platform to discover destinations, share itineraries, and build communities.
 
 🚀 Features
@@ -7,6 +8,7 @@ Plan Your Journey: Create and customize your travel plans, including itineraries
 Connect with Travelers: Join communities, share experiences, and exchange travel tips with like-minded individuals.
 Secure User Authentication: Ensure a seamless and secure experience with robust user authentication (using Passport.js).
 Interactive User Interface: A dynamic and responsive UI for enhanced user experience.
+
 🛠️ Tech Stack
 Frontend
 EJS: For building a responsive and interactive user interface.
@@ -75,4 +77,5 @@ Submit a pull request.
 If you have any questions or feedback, feel free to reach out:
 
 Email:sanjanadeshmukh30@gmail.com
+
 LinkedIn: linkedin.com/in/sanjana-deshmukh-685896214/
