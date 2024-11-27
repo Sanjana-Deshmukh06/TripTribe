@@ -22,6 +22,7 @@ MongoDB: For managing and storing application data.
 Additional Tools
 Mongoose: For seamless interaction with MongoDB.
 Passport.js: For implementing secure user authentication.
+
 📦 Installation
 Follow these steps to get started with TripTribe locally:
 
