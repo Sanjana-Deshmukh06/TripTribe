@@ -13,6 +13,7 @@ Interactive User Interface: A dynamic and responsive UI for enhanced user experi
 Frontend
 EJS: For building a responsive and interactive user interface.
 CSS3 & Bootstrap: For styling and layout.
+
 Backend
 Node.js: For server-side logic and routing.
 Express.js: For handling HTTP requests and middleware.
