@@ -28,7 +28,6 @@ Follow these steps to get started with TripTribe locally:
 
 Prerequisites
 Ensure you have the following installed:
-
 Node.js
 MongoDB
 Setup
