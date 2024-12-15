@@ -48,7 +48,7 @@ npm install
 cd ..
 Configure Environment Variables:
 
-Create a .env file in the root directory.
+Create a .env file in the root directory...
 Add the following variables:
 env
 Copy code
