@@ -11,7 +11,7 @@ Interactive User Interface: A dynamic and responsive UI for enhanced user experi
 
 🛠️ Tech Stack
 Frontend
-EJS: For building a responsive and interactive user interface.
+EJS: For building a responsive and interactive user interface..
 CSS3 & Bootstrap: For styling and layout.
 
 Backend
