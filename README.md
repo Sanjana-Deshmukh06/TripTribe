@@ -7,7 +7,7 @@ Explore Destinations: Discover popular and offbeat travel destinations with deta
 Plan Your Journey: Create and customize your travel plans, including itineraries, accommodation, and activities.
 Connect with Travelers: Join communities, share experiences, and exchange travel tips with like-minded individuals.
 Secure User Authentication: Ensure a seamless and secure experience with robust user authentication (using Passport.js).
-Interactive User Interface: A dynamic and responsive UI for enhanced user experience..
+Interactive User Interface: A dynamic and responsive UI for enhanced user experience.
 
 🛠️ Tech Stack
 Frontend
