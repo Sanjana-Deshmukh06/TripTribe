@@ -2,7 +2,7 @@ TripTribe 🌍
 
 A modern web application built with the MERN stack that simplifies trip planning and enhances travel experiences. TripTribe connects travelers, providing a platform to discover destinations, share itineraries, and build communities.
 
-🚀 Features.
+🚀 Features
 Explore Destinations: Discover popular and offbeat travel destinations with detailed guides and insights.
 Plan Your Journey: Create and customize your travel plans, including itineraries, accommodation, and activities.
 Connect with Travelers: Join communities, share experiences, and exchange travel tips with like-minded individuals.
