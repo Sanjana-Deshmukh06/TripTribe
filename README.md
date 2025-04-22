@@ -5,7 +5,7 @@ A modern web application built with the MERN stack that simplifies trip planning
 🚀 Features
 Explore Destinations: Discover popular and offbeat travel destinations with detailed guides and insights.
 Plan Your Journey: Create and customize your travel plans, including itineraries, accommodation, and activities.
-Connect with Travelers: Join communities, share experiences, and exchange travel tips with like-minded individuals.
+Connect with Travelers: Join communities, share experiences, and exchange travel tips with like-minded individuals..
 Secure User Authentication: Ensure a seamless and secure experience with robust user authentication (using Passport.js).
 Interactive User Interface: A dynamic and responsive UI for enhanced user experience.
 
